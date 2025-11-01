@@ -1,19 +1,27 @@
 :root {
-  --primary: #3b8c4a;
-  --secondary: #5d8baa;
-  --bg: #1f2427;
-  --text: #eaeaea;
-  --card-bg: #3e484f;
+  /* Brand colors */
+  --green: #3B8C4A;
+  --bluegray: #5D8BAA;
+  --dark-gray: #1F2427;
+  --medium-gray: #3E484F;
+  --off-white: #EAEAEA;
+
+  /* Light mode defaults */
+  --primary: var(--green);
+  --secondary: var(--bluegray);
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #3b82f6;
-    --secondary: #cbd5e1;
-    --bg: #0f172a;
-    --text: #f8fafc;
-    --card-bg: #1e293b;
+    --primary: var(--green);
+    --secondary: var(--bluegray);
+    --bg: var(--dark-gray);
+    --text: var(--off-white);
+    --card-bg: var(--medium-gray);
     --shadow: rgba(255, 255, 255, 0.05);
   }
 }
@@ -40,9 +48,17 @@ header {
   transition: background 0.3s;
 }
 
+header .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
 header h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
 header p {
